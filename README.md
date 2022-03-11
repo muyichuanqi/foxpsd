@@ -1,4 +1,4 @@
-# foxpsd 提供在线 api psd智能图层 Smart layer 替换
+# foxpsd 提供在线 api psd智能图层 智能对象 psd解析 parser psd还原 Smart layer 替换
 
 
 * 1.psd 解析
