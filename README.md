@@ -15,3 +15,45 @@ https://https://foxpsd.com
 ![avatar](https://img.foxpsd.com/github_bianjiq.png)
 
 https://https://foxpsd.com
+
+# 浏览器SDK
+
+
+### 实例化
+```js
+<script src="https://img.foxpsd.com/foxpsd-1.0.0.js"></script>
+
+let foxpsdObj = new foxpsd("xiaoguotu", {
+		psdSkus: ['1637653018199421773', '1637653008897318635'],
+		goodsSku: '163765136915264690',
+		token: 'Basic xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+                onload:function(){
+                    //加载完成后的操作
+                 }
+	})
+```
+### 实例化方法
+```js
+<script src="https://img.foxpsd.com/foxpsd-1.0.0.js"></script>
+
+let foxpsdObj = new foxpsd("xiaoguotu", {
+		psdSkus: ['1637653018199421773', '1637653008897318635'],
+		goodsSku: '163765136915264690',
+		token: 'Basic xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+                onload:function(){
+                    //加载完成后的操作
+                 }
+	})
+       if (foxpsdObj && foxpsdObj.load) {
+		foxpsdObj.command({
+			image: 'https://foxpsd.com/www/images/th3.jpg',
+			//传多个表示替换多个图层，使用英文逗号隔开
+			layers: 'zhengmian,sucai,qianpian,右袖'
+		})
+	}
+```
+
+演示链接 https://img.foxpsd.com/foxpsd_demo.html
+
+
+
