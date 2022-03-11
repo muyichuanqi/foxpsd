@@ -55,5 +55,66 @@ let foxpsdObj = new foxpsd("xiaoguotu", {
 
 演示链接 https://img.foxpsd.com/foxpsd_demo.html
 
+# 服务器api
+
+### 请求演示
+```js
+$.ajax({
+     type:'POST',
+     url:'https://foxpsd.com/api/shengchengtu/save/163765136915264690',
+     data:JSON.stringify({
+         "psd_sku":"1637737947373803488",
+         "data":[
+             {
+              "name":"sucai",
+               "content":"https://yourServer.com/1628674835625.jpg"
+              },
+              {
+               "name":"sucai2",
+               "content":"https://yourServer.com/1628671976551.jpg"
+               }
+           ],
+           "callback":"https://yourServer.com/test"
+      }),
+       headers:{
+           'Content-Type': 'application/json',
+           //  填写你的token 进行身份识别（下面为演示token,请勿用于生产环境）
+           'Authorization':'Basic xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+      },
+      success(res){
+           //操作成功
+           if (res.code == '10000') {
+                 console.log(res)
+            }else{
+                console.log(res)
+           }
+      },
+     error(err){
+           console.log(err)
+      }
+})
+```
+### 返回结果
+```json
+{
+    "code": 10000,
+    "data": {
+        "success": 1,
+        "msg": "操作成功",
+        "sku": "1637896425191216816",
+        "oss": "http://xxxxxxx.com/1637200300570/shengchengtu/20211126/163789642619938254.jpg",
+        "fileName": "163789642619938254.jpg",
+        "relative": "/163789642619938254.jpg",
+    },
+    "msg": "请求成功"
+}
+```
+
+
+
+
+
+
+
 
 
